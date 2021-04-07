@@ -1,0 +1,18 @@
+<table border = 1>
+    <tr>
+        <td>date</td>
+        <td>temperature (en °C)</td>
+        <td>pluie (en mm/h)</td>
+        <td>vent (en km/h)</td>
+        <td>pression(en hPa)</td>
+    </tr>
+    {% for obj in meteo_data %}
+    <tr>
+        <td>{{obj[0]}}</td>
+        <td>{{obj[1]}}</td>
+        <td>{{obj[2]}}</td>
+        <td>{{obj[3]}}</td>
+        <td>{{obj[4]}}</td>
+    </tr>
+    {% endfor %}
+</table>

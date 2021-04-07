@@ -1,0 +1,16 @@
+<table border = 1>
+    <tr>
+        <td>date</td>
+        <td>ozone (indice ATMO)</td>
+        <td>dioxyde de souffre (indice ATMO)</td>
+        <td>particule fine (indice ATMO)</td>
+    </tr>
+    {% for obj in polluant_data %}
+    <tr>
+        <td>{{obj[0]}}</td>
+        <td>{{obj[1]}}</td>
+        <td>{{obj[2]}}</td>
+        <td>{{obj[3]}}</td>
+    </tr>
+    {% endfor %}
+</table>

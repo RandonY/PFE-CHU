@@ -1,0 +1,12 @@
+<table border = 1>
+    <tr>
+        <td>date</td>
+        <td>nombre d'entrée aux urgences</td>
+    </tr>
+    {% for obj in hopital_data %}
+    <tr>
+        <td>{{obj[0]}}</td>
+        <td>{{obj[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
