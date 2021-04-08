@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 import time
 import pandas as pd
 
+# Méthode pour récupéré un dataset
+
 def getDataOfDay(day,month,year):
 
     PATH = "https://www.infoclimat.fr/observations-meteo/archives/{}/{}/{}/orly-athis-mons/07149.html".format(day,month,year)
@@ -118,6 +120,9 @@ def getDataOfDay(day,month,year):
     data.to_csv(PATH_TO_SAVE+"\data_{}_{}_{}.csv".format(day,month,year),index=False)
     
     return data
+
+# Combinaison de tous les jours possibles
+
 #day_possible  = ["1er","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
 day_possible  = ["1er","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
 #month_possible = ["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","decembre"]
